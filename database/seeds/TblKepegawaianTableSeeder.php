@@ -10,7 +10,7 @@ class TblKepegawaianTableSeeder extends Seeder {
 		// User::truncate();
 		User::create([
 
-			'nip' => '123453539',
+			'id_user' => '123453539',
 			'nama_user' => 'Admin',
 			'jk' => 'L',
 			'status' => 'admin',

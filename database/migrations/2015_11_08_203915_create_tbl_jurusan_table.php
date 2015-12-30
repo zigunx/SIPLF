@@ -14,7 +14,7 @@ class CreateTbljurusanTable extends Migration {
 	{
 		Schema::create('tbl_jurusan', function(Blueprint $table)
 		{
-			$table->integer('id_jurusan', true);
+			$table->increments('id_jurusan');
 			$table->string('nama_jurusan', 30);
 			$table->string('tahun_ajaran', 15);
 		});

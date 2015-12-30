@@ -51,6 +51,78 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1"> Tempat/Tgl Lahir</label>
+                                    <div class="col-sm-9">
+                                        <input type='text' class='col-sm-10 form-control' name='tmp_tgl_lahir' ng-model='data.tmp_tgl_lahir'/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1">Jenis Kelamin</label>
+                                    <div class="col-sm-9">
+                                        <input type='text' class='col-sm-10 form-control' name='jenkel' ng-model='data.jenkel'/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1">Agama</label>
+                                    <div class="col-sm-9">
+                                        <input type='text' class='col-sm-10 form-control' name='agama' ng-model='data.agama'/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1">Ukuran Jas</label>
+                                    <div class="col-sm-9">
+                                        <input type='text' class='col-sm-10 form-control' name='ukuran_jas' ng-model='data.ukuran_jas'/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1">Status Pekerjaan</label>
+                                    <div class="col-sm-9">
+                                        <input type='text' class='col-sm-10 form-control' name='s_kerja' ng-model='data.s_kerja'/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1">Status Pernikahan</label>
+                                    <div class="col-sm-9">
+                                        <input type='text' class='col-sm-10 form-control' name='s_nikah' ng-model='data.s_nikah'/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1"> Alamat Lengkap</label>
+                                    <div class="col-sm-9">
+                                        <input type='text' class='col-sm-10 form-control' name='alamat' ng-model='data.alamat'/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1">No. HP</label>
+                                    <div class="col-sm-9">
+                                        <input type='text' class='col-sm-10 form-control' name='no_hp' ng-model='data.no_hp'/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1">Nama Orang Tua</label>
+                                    <div class="col-sm-9">
+                                        <input type='text' class='col-sm-10 form-control' name='nama_ortu' ng-model='data.nama_ortu'/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1">Nama Suami/Istri</label>
+                                    <div class="col-sm-9">
+                                        <input type='text' class='col-sm-10 form-control' name='nama_suis' ng-model='data.nama_suis'/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1">Pendidikan Terakhir</label>
+                                    <div class="col-sm-9">
+                                        <input type='text' class='col-sm-10 form-control' name='pendidikan_terakhir' ng-model='data.pendidikan_terakhir'/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1">Alamat Sekolah</label>
+                                    <div class="col-sm-9">
+                                        <input type='text' class='col-sm-10 form-control' name='alamat_sekolah' ng-model='alamat_sekolah'/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                     <label class="col-sm-2 control-label" for="form-field-1"></label>
                                     <div class="col-sm-9">
                                         
