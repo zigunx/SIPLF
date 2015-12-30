@@ -124,17 +124,17 @@ Breadcrumbs::register('jurusanedit', function($breadcrumbs) {
     $breadcrumbs->parent('jurusan');
     $breadcrumbs->push('Edit jurusan', route('admin.jurusan.edit'), ['icon' => '']);
 });
-Breadcrumbs::register('siswa', function($breadcrumbs, $id) {
+Breadcrumbs::register('mahasiswa', function($breadcrumbs, $id) {
     $breadcrumbs->parent('jurusan');
-    $breadcrumbs->push('Siswa', route('admin.jurusan.{id}.siswa.index',$id), ['icon' => '']);
+    $breadcrumbs->push('mahasiswa', route('admin.jurusan.{id}.mahasiswa.index',$id), ['icon' => '']);
 });
-Breadcrumbs::register('siswacreate', function($breadcrumbs, $id) {
-    $breadcrumbs->parent('siswa',$id);
-    $breadcrumbs->push('Tambah Data', url('admin.jurusan.{id}.siswa.create', $id), ['icon' => '']);
+Breadcrumbs::register('mahasiswacreate', function($breadcrumbs, $id) {
+    $breadcrumbs->parent('mahasiswa',$id);
+    $breadcrumbs->push('Tambah Data', url('admin.jurusan.{id}.mahasiswa.create', $id), ['icon' => '']);
 });
-Breadcrumbs::register('siswaedit', function($breadcrumbs,$id) {
-    $breadcrumbs->parent('siswa',$id);
-    $breadcrumbs->push('Edit Data Mahasiswa', route('admin.jurusan.{id}.siswa.edit', $id), ['icon' => '']);
+Breadcrumbs::register('mahasiswaedit', function($breadcrumbs,$id) {
+    $breadcrumbs->parent('mahasiswa',$id);
+    $breadcrumbs->push('Edit Data mahasiswa', route('admin.jurusan.{id}.mahasiswa.edit', $id), ['icon' => '']);
 });
 Breadcrumbs::register('pegawai', function($breadcrumbs) {
     $breadcrumbs->parent('lembaga');

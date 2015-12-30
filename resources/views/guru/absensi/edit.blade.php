@@ -28,9 +28,9 @@
                             <alert ng-repeat="alert in alerts" type="<%alert.type%>" close="closeAlert($index)"><% alert.msg %></alert>
                             <form class="form-horizontal" role="form" name="beritaForm" ng-submit="submit()" enctype="multipart/form-data">
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="form-field-1"> Nama Siswa </label>
+                                    <label class="col-sm-2 control-label" for="form-field-1"> Nama mahasiswa </label>
                                     <div class="col-sm-5">
-                                        <input type='text' class='col-sm-10 form-control' name='nama_siswa' ng-model="data.nama_siswa" readonly/>
+                                        <input type='text' class='col-sm-10 form-control' name='nama_mahasiswa' ng-model="data.nama_mahasiswa" readonly/>
                                     </div>
                                 </div>
                                 <div class="form-group">

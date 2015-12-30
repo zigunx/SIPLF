@@ -15,8 +15,8 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 *
 	 * @var string
 	 */
-	protected $table = 'tbl_kepegawaian';
-        protected $primaryKey = 'id_kepegawaian';
+	protected $table = 'tbl_administrator';
+        protected $primaryKey = 'id_user';
         public $timestamps = false;
 
         /**
@@ -24,7 +24,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['nip', 'nama_pegawai', 'kelahiran', 'matpel', 'jk', 'status', 'username', 'password'];
+	protected $fillable = ['nip', 'nama_user', 'kelahiran', 'matpel', 'jk', 'status', 'username', 'password'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.

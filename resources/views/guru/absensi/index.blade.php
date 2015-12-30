@@ -9,7 +9,7 @@
         <div class="page-header">
             <h1>
                 {{$title}} <br />
-                <small>Absensi Siswa di website SiP LF Wonosobo</small>
+                <small>Absensi mahasiswa di website SiP LF Wonosobo</small>
             </h1>
         </div>
         <!-- end: PAGE TITLE & BREADCRUMB -->

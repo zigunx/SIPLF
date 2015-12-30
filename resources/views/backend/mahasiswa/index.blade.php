@@ -1,15 +1,15 @@
 @extends('backend/templates/index')
 @section('js')
-<script src='{{asset('assets/js/controller/admin-siswa.js')}}'></script>
+<script src='{{asset('assets/js/controller/admin-mahasiswa.js')}}'></script>
 @stop
 @section('content')
-<div class="main-content" ng-controller="siswa">
+<div class="main-content" ng-controller="mahasiswa">
     <!-- end: SPANEL CONFIGURATION MODAL FORM -->
     <div class="container">
         <!-- start: PAGE HEADER -->
         <div class="row">
             <div class="col-sm-12">
-{!! Breadcrumbs::render('siswa',$jurusan_id); !!}
+{!! Breadcrumbs::render('mahasiswa',$jurusan_id); !!}
                 <div class="page-header">
                     <h1>
                         {{$title}} <br />
@@ -29,7 +29,7 @@
                     </div>
                     <div class="panel-body">
                         <alert ng-repeat="alert in alerts" type="<%alert.type%>" close="closeAlert($index)"><%alert.msg%></alert>
-                        <a class="btn btn-green add-row" href="{{route('admin.jurusan.{id}.siswa.create', $jurusan_id)}}">
+                        <a class="btn btn-green add-row" href="{{route('admin.jurusan.{id}.mahasiswa.create', $jurusan_id)}}">
                             Add New <i class="fa fa-plus"></i>
                         </a>
                         <div class="pull-right col-sm-5">
@@ -49,12 +49,12 @@
                             <tbody>
                                 <tr ng-repeat="status in data| filter:paginate">
                                     <td><% status['id_registrasi'] %></td>
-                                    <td><% status['nama_siswa'] %></td>
+                                    <td><% status['nama_mahasiswa'] %></td>
                                     <td><% status['jurusan']['nama_jurusan'] %></td>
                                     <td><% status['jurusan']['tahun_ajaran'] %></td>
                                     <td class="center">
                                         <div class="visible-md visible-lg hidden-sm hidden-xs">
-                                            <a data-original-title="Edit" data-placement="top" class="btn btn-xs btn-teal tooltips" href="{{url('admin/jurusan/'.$jurusan_id)}}/siswa/<% status['id_mahasiswa']%>/edit"><i class="fa fa-edit"></i></a>
+                                            <a data-original-title="Edit" data-placement="top" class="btn btn-xs btn-teal tooltips" href="{{url('admin/jurusan/'.$jurusan_id)}}/mahasiswa/<% status['id_mahasiswa']%>/edit"><i class="fa fa-edit"></i></a>
                                             <a data-original-title="Remove" data-placement="top" class="btn btn-xs btn-bricky tooltips" href="#" ng-click="delete(status['id_mahasiswa'])"><i class="fa fa-times fa fa-white"></i></a>
                                         </div>
                                         <div class="visible-xs visible-sm hidden-md hidden-lg">

@@ -12,8 +12,8 @@ class jurusan extends Model {
     protected $fillable = array('nama_jurusan', 'tahun_ajaran');
     public $timestamps = false;
 
-    public function siswa() {
-        return $this->hasMany('App\Models\Siswa');
+    public function mahasiswa() {
+        return $this->hasMany('App\Models\mahasiswa');
     }
 
     public function absensi() {

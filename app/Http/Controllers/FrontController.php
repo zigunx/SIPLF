@@ -47,7 +47,7 @@ class FrontController extends Controller {
         switch ($id) {
             case 3.4: return $this->dataguru();
             case 3.5: return $this->datapegawai();
-            case 4.1: return $this->datasiswa();
+            case 4.1: return $this->datamahasiswa();
             case 5.1: return $this->absensi();
         }
         $this->data['page'] = Models\Data::with('menu')->where('data_id', $id)->first();
@@ -62,18 +62,18 @@ class FrontController extends Controller {
 
     public function showabsensi(Request $request) {
         $input = $request->all();
-        $siswa = Models\Absensi::getAbsen($input['jurusan'],$input['bulan'],$input['tahun']);
-        return response()->json($siswa);
+        $mahasiswa = Models\Absensi::getAbsen($input['jurusan'],$input['bulan'],$input['tahun']);
+        return response()->json($mahasiswa);
     }
 
-    public function datasiswa() {
-        $this->data['title'] = 'Data Siswa';
-        return view('front.datasiswa', $this->data);
+    public function datamahasiswa() {
+        $this->data['title'] = 'Data mahasiswa';
+        return view('front.datamahasiswa', $this->data);
     }
 
-    public function ambilsiswa($id) {
-        $siswa = Models\Siswa::where('id_jurusan', $id)->get();
-        return response()->json($siswa);
+    public function ambilmahasiswa($id) {
+        $mahasiswa = Models\mahasiswa::where('id_jurusan', $id)->get();
+        return response()->json($mahasiswa);
     }
 
     public function dataguru() {

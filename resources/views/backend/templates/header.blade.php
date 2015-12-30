@@ -20,12 +20,12 @@
                 <!-- start: USER DROPDOWN -->
                 <li class="dropdown current-user">
                     <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
-                        <span class="username">{{$user->nama_pegawai}}</span>
+                        <span class="username">{{$user->nama_user}}</span>
                         <i class="clip-chevron-down"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="{{route('admin.pegawai.edit',$user->id_kepegawaian)}}">
+                            <a href="{{route('admin.pegawai.edit',$user->id_user)}}">
                                 <i class="clip-user-2"></i>
                                 &nbsp;My Profile
                             </a>
@@ -79,15 +79,15 @@
                         </li>
                     </ul>
                 </li>
-                <li class="{{setActive('admin.jurusan')}} {{setActive('admin.siswa')}} {{setActive('admin.pegawai')}}">
+                <li class="{{setActive('admin.jurusan')}} {{setActive('admin.mahasiswa')}} {{setActive('admin.pegawai')}}">
                     <a href="javascript:void(0)" class="dropdown-toggle" data-close-others="true" data-hover="dropdown" data-toggle="dropdown">
                         <span class="selected"></span>
                         lembaga <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="{{setActive('admin.jurusan')}}{{setActive('admin.siswa')}}">
+                        <li class="{{setActive('admin.jurusan')}}{{setActive('admin.mahasiswa')}}">
                             <a href="{{route('admin.jurusan.index')}}">
-                                Data jurusan & Siswa
+                                Data jurusan & mahasiswa
                             </a>
                         </li>
                         <li class="{{setActive('admin.pegawai')}}">

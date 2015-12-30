@@ -1,4 +1,4 @@
-var app = angular.module('siswa', ['ui.bootstrap','blockUI'], function($interpolateProvider) {
+var app = angular.module('mahasiswa', ['ui.bootstrap','blockUI'], function($interpolateProvider) {
     $interpolateProvider.startSymbol('<%');
     $interpolateProvider.endSymbol('%>');
 });
@@ -35,7 +35,7 @@ app.filter('_uriseg', function($location, baseURL) {
         return false;
     }
 });
-angular.module('siswa').controller('jurusan', function($scope, $http, $filter, $timeout, baseURL) {
+angular.module('mahasiswa').controller('jurusan', function($scope, $http, $filter, $timeout, baseURL) {
     $scope.jurusan = {};
     $scope.data = {};
     $scope.show = false;
@@ -44,14 +44,14 @@ angular.module('siswa').controller('jurusan', function($scope, $http, $filter, $
     });
     $scope.submit = function() {
         $scope.show = true;
-        $http.get(baseURL.url('api/ambilsiswa/' + $scope.data['id_jurusan'])).success(function(e) {
+        $http.get(baseURL.url('api/ambilmahasiswa/' + $scope.data['id_jurusan'])).success(function(e) {
 
             $scope.telo = e;
         })
     }
 
 });
-angular.module('siswa').controller('absensi', function($scope, $http, $filter, $timeout, baseURL) {
+angular.module('mahasiswa').controller('absensi', function($scope, $http, $filter, $timeout, baseURL) {
     $scope.data = {};
     $scope.show = false;
     $scope.telo = {};

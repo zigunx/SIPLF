@@ -4,12 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Siswa extends Model {
+class mahasiswa extends Model {
 
     //
     protected $table = 'tbl_mahasiswa';
     protected $primaryKey = 'id_mahasiswa';
-    protected $fillable = array('nama_siswa', 'id_registrasi', 'id_jurusan');
+    protected $fillable = array('nama_mahasiswa', 'id_registrasi', 'id_jurusan');
     public $timestamps = false;
 
     public function jurusan() {

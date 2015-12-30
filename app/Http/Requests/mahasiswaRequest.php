@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class SiswaRequest extends Request {
+class mahasiswaRequest extends Request {
 
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,7 @@ class SiswaRequest extends Request {
         return [
             'id_jurusan' => 'required',
             'id_registrasi' => 'required|numeric|unique:tbl_mahasiswa,id_registrasi,'.Request::get('id_mahasiswa').',id_mahasiswa',
-            'nama_siswa' => 'required',
+            'nama_mahasiswa' => 'required',
         ];
     }
 
@@ -33,7 +33,7 @@ class SiswaRequest extends Request {
             'id_jurusan.required' => 'jurusan Diperlukan!',
             'id_registrasi.required' => 'Nomor registrasi diperlukan!',
             'id_registrasi.numeric' => 'Nomor registrasi harus berupa angka!',
-            'nama_siswa.required' => 'Nama mahasiswa diperlukan!',
+            'nama_mahasiswa.required' => 'Nama mahasiswa diperlukan!',
         ];
     }
 

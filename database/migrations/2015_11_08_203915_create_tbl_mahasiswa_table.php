@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateTblSiswaTable extends Migration {
+class CreateTblmahasiswaTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -17,7 +17,7 @@ class CreateTblSiswaTable extends Migration {
 			$table->integer('id_mahasiswa', true);
 			$table->integer('id_jurusan');
 			$table->integer('id_registrasi');
-			$table->string('nama_siswa', 150);
+			$table->string('nama_mahasiswa', 150);
 		});
 	}
 

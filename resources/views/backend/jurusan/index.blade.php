@@ -32,8 +32,8 @@
                         <a class="btn btn-green add-row" href="{{route('admin.jurusan.create')}}">
                             Tambah jurusan <i class="fa fa-plus"></i>
                         </a>
-                        <a class="btn btn-green add-row" href="{{route('admin.jurusan.{id}.siswa.create', 1)}}">
-                            Tambah Mahasiswa <i class="fa fa-user"></i>
+                        <a class="btn btn-green add-row" href="{{route('admin.jurusan.{id}.mahasiswa.create', 1)}}">
+                            Tambah mahasiswa <i class="fa fa-user"></i>
                         </a>
                         <div class="pull-right col-sm-5">
                             <input class="form-control col-md-12" ng-model="query"  placeholder="Search">
@@ -53,7 +53,7 @@
                                     <td><% status['tahun_ajaran'] %></td>
                                     <td class="center">
                                         <div class="visible-md visible-lg hidden-sm hidden-xs">
-                                            <a data-original-title="Siswa" data-placement="top" class="btn btn-xs btn-success tooltips" href="{{url('admin/jurusan')}}/<% status['id_jurusan']%>/siswa"><i class="fa fa-user"></i> Lihat Data</a>
+                                            <a data-original-title="mahasiswa" data-placement="top" class="btn btn-xs btn-success tooltips" href="{{url('admin/jurusan')}}/<% status['id_jurusan']%>/mahasiswa"><i class="fa fa-user"></i> Lihat Data</a>
                                             <a data-original-title="Edit" data-placement="top" class="btn btn-xs btn-teal tooltips" href="{{url('admin/jurusan')}}/<% status['id_jurusan']%>/edit"><i class="fa fa-edit"></i></a>
                                             <a data-original-title="Remove" data-placement="top" class="btn btn-xs btn-bricky tooltips" href="#" ng-click="delete(status['id_jurusan'])"><i class="fa fa-times fa fa-white"></i></a>
                                         </div>
@@ -64,8 +64,8 @@
                                                 </a>
                                                 <ul class="dropdown-menu pull-right" role="menu">
                                                     <li role="presentation">
-                                                        <a href="{{url('admin/siswa')}}/<% status['id_data']%>/edit" tabindex="-1" role="menuitem">
-                                                            <i class="fa fa-user"></i> Lihat Siswa
+                                                        <a href="{{url('admin/mahasiswa')}}/<% status['id_data']%>/edit" tabindex="-1" role="menuitem">
+                                                            <i class="fa fa-user"></i> Lihat mahasiswa
                                                         </a>
                                                     </li>
                                                     <li role="presentation">

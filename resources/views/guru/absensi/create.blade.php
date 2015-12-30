@@ -19,7 +19,7 @@
                     <ul class="nav nav-tabs tab-bricky" id="myTab">
                         <li class="active">
                             <a data-toggle="tab" href="#panel_tab2_example1">
-                                <i class="green fa fa-home"></i> {{$title}} {{$fulltanggal}} jurusan {{$siswa->first()->jurusan->nama_jurusan}}
+                                <i class="green fa fa-home"></i> {{$title}} {{$fulltanggal}} jurusan {{$mahasiswa->first()->jurusan->nama_jurusan}}
                             </a>
                         </li>
                     </ul>
@@ -28,7 +28,7 @@
                             <alert ng-repeat="alert in alerts" type="<%alert.type%>" close="closeAlert($index)"><% alert.msg %></alert>
                             <form action="{{route('guru.absensi.store')}}" method="post">
                                 <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
-                                <input type="hidden" name="jurusan" value="{{$siswa->first()->id_jurusan}}" />
+                                <input type="hidden" name="jurusan" value="{{$mahasiswa->first()->id_jurusan}}" />
                                 <input type="hidden" name="tanggal" value="{{$tanggal}}" />
                                 <input type="hidden" name="bulan" value="{{$bulan}}" />
                                 <input type="hidden" name="tahun" value="{{$tahun}}" />
@@ -36,15 +36,15 @@
                                     <thead>
                                         <tr>
                                             <th>NIS</th>
-                                            <th>Nama Siswa</th>
+                                            <th>Nama mahasiswa</th>
                                             <th class="center">Keterangan (Absen)</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($siswa as $sis)
+                                        @foreach($mahasiswa as $sis)
                                         <tr>
                                             <td>{{$sis->nis}}</td>
-                                            <td>{{$sis->nama_siswa}}</td>
+                                            <td>{{$sis->nama_mahasiswa}}</td>
                                             <td class="center">
                                                 <label class="radio-inline">
                                                     <input type="radio" value="S" name="absen-{{$sis->id_mahasiswa}}[absen]" class="grey" required>

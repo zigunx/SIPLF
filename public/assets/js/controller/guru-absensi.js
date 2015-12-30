@@ -79,7 +79,7 @@ angular.module('admin').controller('absensiedit', function($scope, $http, $filte
     var id = $filter('_uriseg')(6);
     $http.get(baseURL.url('api/absensi/') + id).success(function(data) {
         $scope.data = data;
-        $scope.data['nama_siswa'] = data.siswa.nama_siswa;
+        $scope.data['nama_mahasiswa'] = data.mahasiswa.nama_mahasiswa;
         $scope.data['jurusan'] = data.jurusan.nama_jurusan;
         $scope.data['bulan'] = data.bulan; // 3  (0 = January, 3 = April)
         $scope.data['tanggal'] = data.tanggal  // 28

@@ -64,7 +64,7 @@
                         <li class="dropdown current-user">
                             <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
                                Selamat Datang!
-                                <span class="username">{{ Auth::user() ->nama_pegawai }};</span>
+                                <span class="username">{{ Auth::user() ->nama_user }};</span>
                                 <i class="clip-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu">

@@ -24,7 +24,7 @@
             </a>
         </li>
         <li class='{{setActive('pegawai')}}'>
-            <a href="{{route('guru.pegawai.edit',Auth::user()->id_kepegawaian)}}"><i class="clip-key-2"></i>
+            <a href="{{route('guru.pegawai.edit',Auth::user()->id_user)}}"><i class="clip-key-2"></i>
                 <span class="title"> Ganti Password </span><span class="selected"></span>
             </a>
         </li>

@@ -12,13 +12,10 @@ class CreateTblKepegawaianTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('tbl_kepegawaian', function(Blueprint $table)
+		Schema::create('tbl_administrator', function(Blueprint $table)
 		{
-			$table->integer('id_kepegawaian', true);
-			$table->string('nip', 50);
-			$table->string('nama_pegawai', 100);
-			$table->string('kelahiran', 150);
-			$table->string('matpel', 100);
+			$table->integer('id_user', true);
+			$table->string('nama_user', 100);
 			$table->string('jk', 1);
 			$table->string('status', 50);
 			$table->string('username', 100);
@@ -35,7 +32,7 @@ class CreateTblKepegawaianTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('tbl_kepegawaian');
+		Schema::drop('tbl_administrator');
 	}
 
 }

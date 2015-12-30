@@ -63,7 +63,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::resource('pengumuman', 'Admin\PengumumanController');
     Route::resource('agenda', 'Admin\AgendaController');
     Route::resource('jurusan', 'Admin\jurusanController');
-    Route::resource('jurusan/{id}/siswa', 'Admin\SiswaController');
+    Route::resource('jurusan/{id}/mahasiswa', 'Admin\mahasiswaController');
     Route::resource('pegawai', 'Admin\PegawaiController');
     Route::resource('polling', 'Admin\PollingController');
     Route::resource('polling/{id}/jawaban', 'Admin\JawabanController');
@@ -108,8 +108,8 @@ Route::group(['prefix' => 'api'], function() {
     Route::get('jurusan', 'Admin\jurusanController@apijurusan');
     Route::get('jurusan/{id}', 'Admin\jurusanController@show');
 
-    Route::get('jurusan/{id}/siswa', 'Admin\SiswaController@apiSiswa');
-    Route::get('siswa/{id}', 'Admin\SiswaController@show');
+    Route::get('jurusan/{id}/mahasiswa', 'Admin\mahasiswaController@apimahasiswa');
+    Route::get('mahasiswa/{id}', 'Admin\mahasiswaController@show');
     Route::get('jurusandropdown', 'Admin\jurusanController@apiCreatejurusan');
 
     Route::get('pegawai', 'Admin\PegawaiController@apiPegawai');
@@ -135,6 +135,6 @@ Route::group(['prefix' => 'api'], function() {
     Route::get('upload', 'Admin\UploadController@apiUpload');
     Route::get('upload/{id}', 'Admin\UploadController@apiUpload');
 
-    Route::get('ambilsiswa/{id}', 'FrontController@ambilsiswa');
+    Route::get('ambilmahasiswa/{id}', 'FrontController@ambilmahasiswa');
     Route::post('showabsensi', 'FrontController@showabsensi');
 });

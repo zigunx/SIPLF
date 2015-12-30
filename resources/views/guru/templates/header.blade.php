@@ -20,12 +20,12 @@
                 <!-- start: USER DROPDOWN -->
                 <li class="dropdown current-user">
                     <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
-                        <span class="username">{{$user->nama_pegawai}}</span>
+                        <span class="username">{{$user->nama_user}}</span>
                         <i class="clip-chevron-down"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="{{route('guru.pegawai.edit',$user->id_kepegawaian)}}">
+                            <a href="{{route('guru.pegawai.edit',$user->id_user)}}">
                                 <i class="clip-user-2"></i>
                                 &nbsp;My Profile
                             </a>

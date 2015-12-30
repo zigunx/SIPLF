@@ -33,7 +33,7 @@
                                    <div class="form-group">
                                     <label class="col-sm-2 control-label" for="form-field-1"> Nama Pegawai </label>
                                     <div class="col-sm-9">
-                                        <input type='text' class='col-sm-10 form-control' name='nama_pegawai' ng-model='data.nama_pegawai'/>
+                                        <input type='text' class='col-sm-10 form-control' name='nama_user' ng-model='data.nama_user'/>
                                     </div>
                                 </div>
                                 <div class="form-group">

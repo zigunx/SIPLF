@@ -11,13 +11,11 @@ class TblKepegawaianTableSeeder extends Seeder {
 		User::create([
 
 			'nip' => '123453539',
-			'nama_pegawai' => 'Admin',
-			'kelahiran' => 'Jakarta, 17 Agustus 1945',
-			'matpel' => 'TIK',
+			'nama_user' => 'Admin',
 			'jk' => 'L',
 			'status' => 'admin',
-			'username' => 'admin',
-			'password' => Hash::make( 'password' ),
+			'username' => '123456',
+			'password' => Hash::make( '123456' ),
 
 		]);
 

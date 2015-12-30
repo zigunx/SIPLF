@@ -32,7 +32,7 @@ class UploadController extends Controller {
         if ($this->auth->user()->status == 'admin') {
             $data = $id ? Upload::find($id) : Upload::all();
         } else {
-            $penulis = $this->auth->user()->nama_pegawai;
+            $penulis = $this->auth->user()->nama_user;
             $data = Upload::where('author', $penulis)->get();
         }
         return response()->json($data);
@@ -65,7 +65,7 @@ class UploadController extends Controller {
         if ($request->hasFile('file')) {
             $upload->judul_file = $input['data'];
             $upload->tgl_posting = date('Y-m-d');
-            $upload->author = $this->auth->user()->nama_pegawai;
+            $upload->author = $this->auth->user()->nama_user;
             $upload->nama_file = $request->file('file')->getClientOriginalName();
             $request->file('file')->move($path, $upload->nama_file);
             if ($upload->save()) {
@@ -80,7 +80,7 @@ class UploadController extends Controller {
         $upload = Upload::find($input->id_download);
         if ($request->hasFile('file')) {
             $upload->judul_file = $input->judul_file;
-            $upload->author = $this->auth->user()->nama_pegawai;
+            $upload->author = $this->auth->user()->nama_user;
             $upload->nama_file = $request->file('file')->getClientOriginalName();
             $request->file('file')->move($path, $upload->nama_file);
             if ($upload->save()) {
@@ -125,7 +125,7 @@ class UploadController extends Controller {
     public function update(UploadRequest $request, $id) {
         //
         $input = $request->all();
-        $input['author'] = $this->auth->user()->nama_pegawai;
+        $input['author'] = $this->auth->user()->nama_user;
         $upload = Upload::find($id);
         if ($upload->update($input)) {
             return response()->json(array('success' => TRUE));

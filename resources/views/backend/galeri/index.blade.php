@@ -67,7 +67,7 @@
                                     <td><% status['nama_album'] %></td>
                                     <td class="center">
                                         <div class="visible-md visible-lg hidden-sm hidden-xs">
-                                            <a data-original-title="Siswa" data-placement="top" class="btn btn-xs btn-success tooltips" href="{{url('admin/galeri')}}/<% status['id_album']%>/foto"><i class="fa fa-user"></i> Lihat Foto</a>
+                                            <a data-original-title="mahasiswa" data-placement="top" class="btn btn-xs btn-success tooltips" href="{{url('admin/galeri')}}/<% status['id_album']%>/foto"><i class="fa fa-user"></i> Lihat Foto</a>
                                             <a data-original-title="Edit" data-placement="top" class="btn btn-xs btn-teal tooltips" href="{{url('admin/galeri')}}/<% status['id_album']%>/edit"><i class="fa fa-edit"></i></a>
                                             <a data-original-title="Remove" data-placement="top" class="btn btn-xs btn-bricky tooltips" href="#" ng-click="delete(status['id_album'])"><i class="fa fa-times fa fa-white"></i></a>
                                         </div>

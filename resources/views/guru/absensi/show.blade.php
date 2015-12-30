@@ -19,7 +19,7 @@
                     <ul class="nav nav-tabs tab-bricky" id="myTab">
                         <li class="active">
                             <a data-toggle="tab" href="#panel_tab2_example1">
-                                <i class="green fa fa-home"></i> {{$title}} {{$fulltanggal}} jurusan {{$siswa->first()->jurusan->nama_jurusan}}
+                                <i class="green fa fa-home"></i> {{$title}} {{$fulltanggal}} jurusan {{$mahasiswa->first()->jurusan->nama_jurusan}}
                             </a>
                         </li>
                     </ul>
@@ -32,19 +32,19 @@
                                     <thead>
                                         <tr>
                                             <th>NIS</th>
-                                            <th>Nama Siswa</th>
+                                            <th>Nama mahasiswa</th>
                                             <th class="center">Keterangan (Absen)</th>
                                             <th class="center">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    @if($siswa)
-                                        <input type="hidden" name="jurusan" value="{{$siswa->first()->id_jurusan}}" />
-                                        @if(count($siswa->first()->absensi) > 0)
-                                            @foreach($siswa as $sis)
+                                    @if($mahasiswa)
+                                        <input type="hidden" name="jurusan" value="{{$mahasiswa->first()->id_jurusan}}" />
+                                        @if(count($mahasiswa->first()->absensi) > 0)
+                                            @foreach($mahasiswa as $sis)
                                                     <tr>
                                                         <td>{{$sis->nis}}</td>
-                                                        <td>{{$sis->nama_siswa}}</td>
+                                                        <td>{{$sis->nama_mahasiswa}}</td>
                                                         <td class="center">
                                                             {{$sis->absensi->first()->absen}}
                                                         </td>

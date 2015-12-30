@@ -27,7 +27,7 @@ class PegawaiController extends Controller {
     }
 
     public function apiPegawai() {
-        $data = Pegawai::orderBy('id_kepegawaian')->get();
+        $data = Pegawai::orderBy('id_user')->get();
         return response()->json($data);
     }
 

@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\SiswaRequest;
+use App\Http\Requests\mahasiswaRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Siswa;
+use App\Models\mahasiswa;
 use Illuminate\Contracts\Auth\Guard;
 
-class SiswaController extends Controller {
+class mahasiswaController extends Controller {
 
     public function __construct(Guard $auth) {
         $this->auth = $auth;
@@ -22,8 +22,8 @@ class SiswaController extends Controller {
     public function index($jurusan_id, $id = null) {
         //
         $data['jurusan_id'] = $jurusan_id;
-        $data['title'] = 'Menu Mahasiswa';
-        return view('backend.siswa.index', $data);
+        $data['title'] = 'Menu mahasiswa';
+        return view('backend.mahasiswa.index', $data);
     }
 
     /**
@@ -31,9 +31,9 @@ class SiswaController extends Controller {
      *
      * @return Response
      */
-    public function apiSiswa($id = NULL) {
+    public function apimahasiswa($id = NULL) {
         //
-        $data = Siswa::with('jurusan')->where('id_jurusan', '=', $id)->orderBy('id_registrasi')->get();
+        $data = mahasiswa::with('jurusan')->where('id_jurusan', '=', $id)->orderBy('id_registrasi')->get();
         return response()->json($data);
     }
 
@@ -46,7 +46,7 @@ class SiswaController extends Controller {
         //
         $data['id'] = $id;
         $data['title'] = 'Tambah Data';
-        return View('backend.siswa.create', $data);
+        return View('backend.mahasiswa.create', $data);
     }
 
     /**
@@ -54,11 +54,11 @@ class SiswaController extends Controller {
      *
      * @return Response
      */
-    public function store(SiswaRequest $request, $id = null) {
+    public function store(mahasiswaRequest $request, $id = null) {
         //
         $input = $request->all();
-        $siswa = new Siswa($input);
-        if ($siswa->save()) {
+        $mahasiswa = new mahasiswa($input);
+        if ($mahasiswa->save()) {
             return response()->json(array('success' => TRUE));
         }
     }
@@ -71,7 +71,7 @@ class SiswaController extends Controller {
      */
     public function show($id) {
         //
-        $data = Siswa::find($id);
+        $data = mahasiswa::find($id);
         return response()->json($data);
     }
 
@@ -84,9 +84,9 @@ class SiswaController extends Controller {
     public function edit($jurusan_id, $id) {
         //
         $data['jurusan_id'] = $jurusan_id;
-        $data['title'] = 'Edit Data Mahasiswa';
-        $data['data'] = Siswa::find($id);
-        return view('backend.siswa.edit', $data);
+        $data['title'] = 'Edit Data mahasiswa';
+        $data['data'] = mahasiswa::find($id);
+        return view('backend.mahasiswa.edit', $data);
     }
 
     /**
@@ -95,11 +95,11 @@ class SiswaController extends Controller {
      * @param  int  $id
      * @return Response
      */
-    public function update(SiswaRequest $request, $jurusan_id, $id) {
+    public function update(mahasiswaRequest $request, $jurusan_id, $id) {
         //
         $input = $request->all();
-        $siswa = Siswa::find($id);
-        if ($siswa->update($input)) {
+        $mahasiswa = mahasiswa::find($id);
+        if ($mahasiswa->update($input)) {
             return response()->json(array('success' => TRUE));
         }
     }
@@ -112,8 +112,8 @@ class SiswaController extends Controller {
      */
     public function destroy($jurusan_id, $id) {
         //
-        $siswa = Siswa::find($id);
-        if ($siswa->delete()) {
+        $mahasiswa = mahasiswa::find($id);
+        if ($mahasiswa->delete()) {
             return response()->json(array('success' => TRUE));
         }
     }
