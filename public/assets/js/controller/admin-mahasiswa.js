@@ -72,6 +72,39 @@ angular.module('admin').controller('mahasiswacreate', function($scope, $http, $f
         });
     }
 });
+
+angular.module('admin').controller('mahasiswacreate', function($scope, $http, $filter, $timeout, baseURL) {
+    $scope.data = {};
+    $scope.alerts = [];
+    $scope.closeAlert = function(index) {
+        $scope.alerts.splice(index, 1);
+    };
+    var id = $filter('_uriseg')(6);
+    $scope.data['id_jas'] = id;
+    $scope.jas = {};
+    $http.get(baseURL.url('api/jasdropdown')).success(function(data) {
+        $scope.jas = data;
+    });
+    $scope.submit = function() {
+        $http.post(baseURL.url('admin/jas/') + id + '/mahasiswa', $scope.data).success(function(data) {
+            if (data.success) {
+                window.location.replace(baseURL.url('admin/jas/') + $scope.data['id_jas'] + '/mahasiswa');
+            }
+        }).error(function(e, status) {
+            if (status === 422) {
+                var x;
+                for (x in e) {
+                    $scope.alerts.push({'type': "danger", 'msg': (e[x][0])});
+                }
+                $timeout(function() {
+                    $scope.alerts = [];
+                }, 5000);
+            }
+        });
+    }
+});
+
+
 angular.module('admin').controller('mahasiswaedit', function($scope, $http, $filter, $timeout, baseURL) {
     $scope.data = {};
     $scope.alerts = [];

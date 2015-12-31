@@ -72,7 +72,10 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="form-field-1">Ukuran Jas</label>
                                     <div class="col-sm-9">
-                                        <input type='text' class='col-sm-10 form-control' name='ukuran_jas' ng-model='data.ukuran_jas'/>
+                                        <select name="id_jurusan" class="form-control" ng-model="data.id_jas">
+                                            <option value="">Pilih ukuran</option>
+                                            <option ng-repeat="unit in jas" ng-selected="unit.id == {{$id}}" value="<%unit.id%>"><% unit.label %></option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -120,7 +123,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="form-field-1">Alamat Sekolah</label>
                                     <div class="col-sm-9">
-                                        <input type='text' class='col-sm-10 form-control' name='alamat_sekolah' ng-model='alamat_sekolah'/>
+                                        <input type='text' class='col-sm-10 form-control' name='alamat_sekolah' ng-model='data.alamat_sekolah'/>
                                     </div>
                                 </div>
                                 <div class="form-group">

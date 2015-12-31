@@ -64,6 +64,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::resource('agenda', 'Admin\AgendaController');
     Route::resource('jurusan', 'Admin\jurusanController');
     Route::resource('jurusan/{id}/mahasiswa', 'Admin\mahasiswaController');
+
+    Route::resource('ukuranjas', 'Admin\UkuranJasController');
+    Route::resource('ukuranjas/{id}/mahasiswa', 'Admin\mahasiswaController');
+
+
     Route::resource('pegawai', 'Admin\PegawaiController');
     Route::resource('polling', 'Admin\PollingController');
     Route::resource('polling/{id}/jawaban', 'Admin\JawabanController');
@@ -111,6 +116,14 @@ Route::group(['prefix' => 'api'], function() {
     Route::get('jurusan/{id}/mahasiswa', 'Admin\mahasiswaController@apimahasiswa');
     Route::get('mahasiswa/{id}', 'Admin\mahasiswaController@show');
     Route::get('jurusandropdown', 'Admin\jurusanController@apiCreatejurusan');
+
+    Route::get('ukuranjas', 'Admin\ukuranjasController@apiukuranjas');
+    Route::get('ukuranjas/{id}', 'Admin\ukuranjasController@show');
+
+    Route::get('ukuranjas/{id}/mahasiswa', 'Admin\mahasiswaController@apimahasiswa');
+    Route::get('mahasiswa/{id}', 'Admin\mahasiswaController@show');
+    Route::get('ukuranjasdropdown', 'Admin\ukuranjasController@apiCreateukuranjas');
+
 
     Route::get('pegawai', 'Admin\PegawaiController@apiPegawai');
     Route::get('pegawai/{id}', 'Admin\PegawaiController@show');

@@ -18,9 +18,10 @@ class CreateTblmahasiswaTable extends Migration {
 			$table->integer('id_jurusan');
 			$table->integer('id_registrasi');
 			$table->string('nama_mahasiswa', 150);
+			$table->string('tmp_tgl_lahir', 20);
 			$table->string('jenkel', 10);
 			$table->string('agama', 20);
-			$table->string('ukuran_jas', 3);
+			$table->string('id_jas', 3);
 			$table->string('s_kerja', 50);
 			$table->string('s_nikah', 10);
 			$table->string('alamat', 150);
@@ -29,7 +30,6 @@ class CreateTblmahasiswaTable extends Migration {
 			$table->string('nama_suis', 50);
 			$table->string('pendidikan_terakhir', 10);
 			$table->string('alamat_skolah', 150);
-			$table->string('persyaratan', 10);
 			$table->timestamps();
 	});
 	}

@@ -12,9 +12,9 @@ class CreateUkuranJasTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_ukuran_jas', function (Blueprint $table) {
+        Schema::create('tbl_ukuranjas', function (Blueprint $table) {
             $table->increments('id_jas');
-            $table->string('ukuran_jas',2);
+            $table->string('ukuranjas',2);
             
         });
     }
@@ -26,6 +26,6 @@ class CreateUkuranJasTable extends Migration
      */
     public function down()
     {
-        Schema::drop('tbl_ukuran_jas');
+        Schema::drop('tbl_ukuranjas');
     }
 }

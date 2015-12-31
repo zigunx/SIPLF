@@ -22,10 +22,10 @@ class Persyaratan extends Model
 
     public function scopeDropdownjas($query) {
         $data = array();
-        $eselon = $query->select(array('id_jas', 'ukuran_jas'))->get();
+        $eselon = $query->select(array('id_jas', 'ukuranjas'))->get();
         if (count($eselon) > 0) {
             foreach ($eselon as $ese) {
-                $data[] = array('id' => $ese->id_jas, 'label' => $ese->ukuran_jas);
+                $data[] = array('id' => $ese->id_jas, 'label' => $ese->ukuranjas);
             }
         }
         return $data;

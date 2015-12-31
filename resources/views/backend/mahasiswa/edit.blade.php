@@ -71,7 +71,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="form-field-1">Ukuran Jas</label>
                                     <div class="col-sm-9">
-                                        <input type='text' class='col-sm-10 form-control' name='ukuran_jas' ng-model='data.ukuran_jas'/>
+                                        <input type='text' class='col-sm-10 form-control' name='ukuranjas' ng-model='data.ukuranjas'/>
                                     </div>
                                 </div>
                                 <div class="form-group">

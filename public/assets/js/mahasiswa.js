@@ -81,9 +81,15 @@ angular.module('mahasiswa').controller('absensi', function($scope, $http, $filte
         var tahun = {'id': t, 'label': t};
         $scope.tahun.push(tahun);
     }
+    
     $http.get(baseURL.url('api/jurusandropdown')).success(function(data) {
         $scope.jurusan = data;
     });
+
+    $http.get(baseURL.url('api/jasdropdown')).success(function(data) {
+        $scope.jas = data;
+    });
+
     $scope.submit = function() {
         $http.post(baseURL.url('api/showabsensi'), $scope.data).success(function(e) {
             $scope.show = true;

@@ -128,6 +128,25 @@ Breadcrumbs::register('mahasiswa', function($breadcrumbs, $id) {
     $breadcrumbs->parent('jurusan');
     $breadcrumbs->push('mahasiswa', route('admin.jurusan.{id}.mahasiswa.index',$id), ['icon' => '']);
 });
+
+
+Breadcrumbs::register('ukuranjas', function($breadcrumbs) {
+    $breadcrumbs->parent('lembaga');
+    $breadcrumbs->push('ukuranjas', route('admin.ukuranjas.index'), ['icon' => '']);
+});
+Breadcrumbs::register('ukuranjascreate', function($breadcrumbs) {
+    $breadcrumbs->parent('ukuranjas');
+    $breadcrumbs->push('Tambah ukuranjas', route('admin.ukuranjas.create'), ['icon' => '']);
+});
+Breadcrumbs::register('ukuranjasedit', function($breadcrumbs) {
+    $breadcrumbs->parent('ukuranjas');
+    $breadcrumbs->push('Edit ukuranjas', route('admin.ukuranjas.edit'), ['icon' => '']);
+});
+Breadcrumbs::register('mahasiswa', function($breadcrumbs, $id) {
+    $breadcrumbs->parent('ukuranjas');
+    $breadcrumbs->push('mahasiswa', route('admin.ukuranjas.{id}.mahasiswa.index',$id), ['icon' => '']);
+});
+
 Breadcrumbs::register('mahasiswacreate', function($breadcrumbs, $id) {
     $breadcrumbs->parent('mahasiswa',$id);
     $breadcrumbs->push('Tambah Data', url('admin.jurusan.{id}.mahasiswa.create', $id), ['icon' => '']);
