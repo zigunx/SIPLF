@@ -51,34 +51,7 @@
                         Dashboard
                     </a>
                 </li>
-                <li class="{{setActive('admin.datastatis')}}">
-                    <a href="{{route('admin.datastatis.index')}}">
-                        Data Statis   
-                    </a>
-                </li>
-                <li class="{{setActive('admin.berita')}}  {{setActive('admin.pengumuman')}}  {{setActive('admin.agenda')}}">
-                    <a href="javascript:void(0)" class="dropdown-toggle" data-close-others="true" data-hover="dropdown" data-toggle="dropdown">
-                        <span class="selected"></span>
-                        Data Dinamis <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="{{setActive('admin.berita')}}">
-                            <a href="{{route('admin.berita.index')}}">
-                                Index Berita
-                            </a>
-                        </li>
-                        <li class="{{setActive('admin.pengumuman')}}">
-                            <a href="{{route('admin.pengumuman.index')}}">
-                                Pengumuman
-                            </a>
-                        </li>
-                        <li class="{{setActive('admin.agenda')}}">
-                            <a href="{{route('admin.agenda.index')}}">
-                                Agenda lembaga
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+                
                 <li class="{{setActive('admin.jurusan')}} {{setActive('admin.mahasiswa')}} {{setActive('admin.pegawai')}}">
                     <a href="javascript:void(0)" class="dropdown-toggle" data-close-others="true" data-hover="dropdown" data-toggle="dropdown">
                         <span class="selected"></span>
@@ -97,18 +70,6 @@
                         </li>
                         
                     </ul>
-                </li>
-                
-                <li class="{{setActive('admin.galeri')}}">
-                    <a href="{{route('admin.galeri.index')}}">
-                        Gallery
-                    </a>
-                </li>
-                
-                <li class="{{setActive('admin.upload')}}">
-                    <a href="{{route('admin.upload.index')}}">
-                        Upload
-                    </a>
                 </li>
             </ul>
         </div>
